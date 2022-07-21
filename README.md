@@ -9,5 +9,8 @@ Para rodar uma aplicação PHP, é preciso colocar as pastas baixadas em seu ser
 Por experiência própria, recomendo criar um e-mail de testes *hotmail*, pois a microsoft permite o login por aplicações não confiáveis. Atualmente o Google não permite mais o login por aplicações não confiáveis, não existe mais a opção para permitir este tipo de ação.
 
 Você pode entrar em contato comigo em: "miguelteles2002@gmail.com", caso haja algum problema. 🙂
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57587ceb37045144bde6803c0e87b84380cf124b
 
