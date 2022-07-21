@@ -1,10 +1,10 @@
 <?php   
 
-    require "./bibliotecas/PHPMailer/Exception.php";
-    require "./bibliotecas/PHPMailer/OAuth.php";
-    require "./bibliotecas/PHPMailer/PHPMailer.php";
-    require "./bibliotecas/PHPMailer/POP3.php";
-    require "./bibliotecas/PHPMailer/SMTP.php";
+    require "../app_send_mail/bibliotecas/PHPMailer/Exception.php";
+    require "../app_send_mail/bibliotecas/PHPMailer/OAuth.php";
+    require "../app_send_mail/bibliotecas/PHPMailer/PHPMailer.php";
+    require "../app_send_mail/bibliotecas/PHPMailer/POP3.php";
+    require "../app_send_mail/bibliotecas/PHPMailer/SMTP.php";
 
     //configurando namespaces -> importando as classes PHPMailer e Exception
     use PHPMailer\PHPMailer\PHPMailer;
@@ -62,7 +62,7 @@
         $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('tests_miguelalotateles@outlook.com', 'Remetente');
+        $mail->setFrom('', 'Remetente'); //<- colocar seu email aqui
         $mail->addAddress($mensagem->__get('para'));  //-> adiciona um destinatário. Pode colocar quantos métodos addAdress quiser   //Add a recipient
         //$mail->addAddress('webcompleto2@gmail.com', 'Destinatário');
         //$mail->addReplyTo('info@example.com', 'Information'); //caso o destinatário responda, enviar a resposta para outro remetente
