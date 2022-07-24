@@ -52,25 +52,22 @@
     $mail = new PHPMailer(true);
     try {
         //Server settings
-        $mail->SMTPDebug = false;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = '';    // <- colocar email de teste aqui                //SMTP username
-        $mail->Password   = '';    // <- colocar senha de teste aqui                      //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->SMTPDebug = false;                      
+        $mail->isSMTP();                                            
+        $mail->Host       = 'smtp-mail.outlook.com';                    
+        $mail->SMTPAuth   = true;                                   /
+        $mail->Username   = '';    // <- colocar email de teste aqui                
+        $mail->Password   = '';    // <- colocar senha de teste aqui                      
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
+        $mail->Port       = 587;                                   
 
         //Recipients
         $mail->setFrom('', 'Remetente'); //<- colocar seu email aqui
         $mail->addAddress($mensagem->__get('para'));  //-> adiciona um destinatário. Pode colocar quantos métodos addAdress quiser   //Add a recipient
-        //$mail->addAddress('webcompleto2@gmail.com', 'Destinatário');
-        //$mail->addReplyTo('info@example.com', 'Information'); //caso o destinatário responda, enviar a resposta para outro remetente
-        //$mail->addCC('cc@example.com'); //adiciona destnatário de cópia
-        //$mail->addBCC('bcc@example.com'); //adiciona destinatário de cópia oculto
+        
         
         //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->isHTML(true);                                  
         $mail->Subject =  $mensagem->__get('assunto');
         $mail->Body    = $mensagem->__get('mensagem');
         $mail->AltBody = 'É necessário utilizar um client que suporte HTML para ter acesso total ao conteúdo desta mensagem';
