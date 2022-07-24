@@ -55,7 +55,7 @@
         $mail->SMTPDebug = false;                      
         $mail->isSMTP();                                            
         $mail->Host       = 'smtp-mail.outlook.com';                    
-        $mail->SMTPAuth   = true;                                   /
+        $mail->SMTPAuth   = true;                                   
         $mail->Username   = '';    // <- colocar email de teste aqui                
         $mail->Password   = '';    // <- colocar senha de teste aqui                      
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
